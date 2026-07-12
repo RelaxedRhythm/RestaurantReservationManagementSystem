@@ -25,13 +25,16 @@ export default function BookReservationPage() {
 
   return (
     <div className="dashboard-card">
-      <h2>Book a table</h2>
-      <form onSubmit={handleSubmit} className="auth-form">
-        <input type="date" name="date" value={formData.date} onChange={handleChange} required />
-        <input type="time" name="time" value={formData.time} onChange={handleChange} required />
-        <input type="number" name="guestCount" min="1" max="10" value={formData.guestCount} onChange={handleChange} required />
-        {message ? <p className="error-text">{message}</p> : null}
-        <button type="submit" className="button primary">Reserve</button>
+      <h2 className="text-xl font-semibold mb-4">Book a table</h2>
+      <form onSubmit={handleSubmit} className="auth-form flex flex-col gap-4 w-full">
+        <input type="date" name="date" value={formData.date} onChange={handleChange} required 
+        className="w-full border rounded-md px-3 py-2"/>
+        <input type="time" name="time" value={formData.time} onChange={handleChange} required
+        className="w-full border rounded-md px-3 py-2" />
+        <input type="number" name="guestCount" min="1" max="10" value={formData.guestCount} onChange={handleChange} required
+        className="w-full border rounded-md px-3 py-2" />
+        {message ? <p className="text-red-500 text-sm">{message}</p> : null}
+        <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-md transition">Reserve</button>
       </form>
     </div>
   );

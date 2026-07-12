@@ -41,21 +41,16 @@ export default function MyReservationsPage() {
 
   return (
     <div className="dashboard-card">
-      <h2>My Reservations</h2>
+      <h2 text-xl font-semibold mb-4>My Reservations</h2>
 
       {reservations.length === 0 ? (
         <p>No reservations yet.</p>
       ) : (
-        <ul className="list-card">
+        <ul className="list-card space-y-4">
           {reservations.map((reservation) => (
             <li
               key={reservation._id}
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                marginBottom: "12px",
-              }}
+             className="border rounded-lg p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3"
             >
               <div>
                 <strong>{reservation.date.split("T")[0]}</strong> at{" "}
@@ -65,21 +60,17 @@ export default function MyReservationsPage() {
                     hour: "numeric",
                     minute: "2-digit",
                     hour12: true,
-                  },
-                )}{" "}
-                for {reservation.guestCount} guests
+                  }
+                )}
+                <br/>
+                <span className="text-gray-600">
+              {reservation.guestCount} guests
+            </span>
               </div>
 
               <button
                 onClick={() => handleCancel(reservation._id)}
-                style={{
-                  background: "#dc2626",
-                  color: "#fff",
-                  border: "none",
-                  padding: "8px 14px",
-                  borderRadius: "6px",
-                  cursor: "pointer",
-                }}
+                className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md w-full sm:w-auto transition"
               >
                 Cancel
               </button>
