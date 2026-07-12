@@ -29,7 +29,7 @@ const LoginPage = () => {
 
   return (
     <div className="auth-card">
-      <h2>Login</h2>
+      <h2 className='text-xl font-semibold mb-4'>Login</h2>
       <p>Welcome back to the restaurant reservation system.</p>
       <form onSubmit={handleSubmit} className="auth-form">
         <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />

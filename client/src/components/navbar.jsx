@@ -13,9 +13,9 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="navbar">
-      <div className="brand">Restaurant Reservation</div>
-      <div className="nav-links">
+    <nav className="flex flex-col md:flex-row md:justify-between md:items-center bg-white shadow px-4 py-4 gap-4">
+      <div className="text-xl font-bold text-center md:text-left">Restaurant Reservation</div>
+      <div className="flex flex-col md:flex-row items-center gap-3">
         {user.role === "admin" ? (
           <>
             <NavLink to="/admin">Dashboard</NavLink>
@@ -28,7 +28,7 @@ export default function Navbar() {
             <NavLink to="/dashboard/reservations">My reservations</NavLink>
           </>
         )}
-        <button type="button" className="logout-btn" onClick={handleLogout}>
+        <button type="button" className="bg-red-600 text-white px-4 py-2 rounded-md w-full md:w-auto" onClick={handleLogout}>
           Logout
         </button>
       </div>

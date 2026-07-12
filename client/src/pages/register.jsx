@@ -34,7 +34,7 @@ const RegisterPage = () => {
 
     return (
         <div className="auth-card">
-            <h2>Register</h2>
+            <h2 className="text-xl font-semibold mb-4">Register</h2>
             <p>Create your account to make a reservation.</p>
             <form onSubmit={handleSubmit} className="auth-form">
                 <input
