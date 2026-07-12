@@ -67,7 +67,7 @@ export default function MyReservationsPage() {
                     hour12: true,
                   },
                 )}{" "}
-                for {reservation.guests} guests
+                for {reservation.guestCount} guests
               </div>
 
               <button
