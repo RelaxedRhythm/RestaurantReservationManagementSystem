@@ -38,7 +38,7 @@ const LoginPage = () => {
         <button type="submit" className="button primary">Login</button>
       </form>
       <p className="switch-text">
-        No account? <Link to="/register">Create one</Link>
+        No account? <u><Link to="/register">Create one</Link> </u>
       </p>
     </div>
   );
