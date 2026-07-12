@@ -408,6 +408,10 @@ Key learning outcomes include:
 
 ---
 
+**Note Regarding Commit History**
+The Git commit history for this repository does not fully reflect the project's development process. Due to a local repository issue that required reinitializing Git and reconnecting to the remote repository, the original incremental commit history was lost. Despite this, the project was developed in multiple stages, including implementation, testing, debugging, and deployment, and the repository contains the complete working solution.
+
+
 # 👨‍💻 Author
 
 **Rhythm Sharma**
