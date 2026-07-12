@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import api from "../services/api";
-import UpdateReservationModal from "../components/UpdateReservationModal";
+import UpdateReservationModal from "../components/updateReservationModal";
 
 export default function AdminDashboard() {
   const [stats, setStats] = useState({
